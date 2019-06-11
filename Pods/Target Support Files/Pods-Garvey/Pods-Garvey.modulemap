@@ -1,0 +1,6 @@
+framework module Pods_Garvey {
+  umbrella header "Pods-Garvey-umbrella.h"
+
+  export *
+  module * { export * }
+}
