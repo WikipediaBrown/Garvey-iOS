@@ -8,12 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		5610AB3230A1F3FCB529581C /* Pods_GarveyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7823618C6AEE7A26D1FC7FD /* Pods_GarveyUITests.framework */; };
+		5B05D2A822C4968E00573407 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2A722C4968E00573407 /* AppComponent.swift */; };
+		5B05D2AE22C4990E00573407 /* CartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2AA22C4990E00573407 /* CartRouter.swift */; };
+		5B05D2AF22C4990E00573407 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2AB22C4990E00573407 /* CartViewController.swift */; };
+		5B05D2B022C4990E00573407 /* CartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2AC22C4990E00573407 /* CartBuilder.swift */; };
+		5B05D2B122C4990E00573407 /* CartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2AD22C4990E00573407 /* CartInteractor.swift */; };
+		5B05D2B722C4993000573407 /* CatalogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2B322C4993000573407 /* CatalogRouter.swift */; };
+		5B05D2B822C4993000573407 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2B422C4993000573407 /* CatalogViewController.swift */; };
+		5B05D2B922C4993000573407 /* CatalogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2B522C4993000573407 /* CatalogBuilder.swift */; };
+		5B05D2BA22C4993000573407 /* CatalogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2B622C4993000573407 /* CatalogInteractor.swift */; };
+		5B05D2C022C4995900573407 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2BC22C4995900573407 /* ProfileRouter.swift */; };
+		5B05D2C122C4995900573407 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2BD22C4995900573407 /* ProfileViewController.swift */; };
+		5B05D2C222C4995900573407 /* ProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2BE22C4995900573407 /* ProfileBuilder.swift */; };
+		5B05D2C322C4995900573407 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2BF22C4995900573407 /* ProfileInteractor.swift */; };
+		5B05D2C922C4999700573407 /* SingleItemRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2C522C4999700573407 /* SingleItemRouter.swift */; };
+		5B05D2CA22C4999700573407 /* SingleItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2C622C4999700573407 /* SingleItemViewController.swift */; };
+		5B05D2CB22C4999700573407 /* SingleItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2C722C4999700573407 /* SingleItemBuilder.swift */; };
+		5B05D2CC22C4999700573407 /* SingleItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2C822C4999700573407 /* SingleItemInteractor.swift */; };
+		5B3B91DE22B3582B0013100C /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B91DA22B3582B0013100C /* RootRouter.swift */; };
+		5B3B91DF22B3582B0013100C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B91DB22B3582B0013100C /* RootViewController.swift */; };
+		5B3B91E022B3582B0013100C /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B91DC22B3582B0013100C /* RootBuilder.swift */; };
+		5B3B91E122B3582B0013100C /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B91DD22B3582B0013100C /* RootInteractor.swift */; };
 		5BDF4F5022B0637F00263C87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF4F4F22B0637F00263C87 /* AppDelegate.swift */; };
 		5BDF4F5722B0638000263C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDF4F5622B0638000263C87 /* Assets.xcassets */; };
 		5BDF4F5A22B0638000263C87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BDF4F5822B0638000263C87 /* LaunchScreen.storyboard */; };
 		5BDF4F6522B0638100263C87 /* GarveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF4F6422B0638100263C87 /* GarveyTests.swift */; };
 		5BDF4F7022B0638100263C87 /* GarveyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF4F6F22B0638100263C87 /* GarveyUITests.swift */; };
-		5BDF4F7E22B0639500263C87 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF4F7D22B0639500263C87 /* RootViewController.swift */; };
 		9AA6B3631BA2CBF7ED1A5119 /* Pods_Garvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C392CFC893A4C8D08D5BEB /* Pods_Garvey.framework */; };
 		E5AB25B39E079B37ABF25C97 /* Pods_GarveyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95957F3F4D21BFBCCA8F9DB9 /* Pods_GarveyTests.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +60,27 @@
 		3031E10D9E3CB66D68F8BA53 /* Pods-GarveyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarveyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GarveyTests/Pods-GarveyTests.release.xcconfig"; sourceTree = "<group>"; };
 		417BB5746645902C40980B68 /* Pods-Garvey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garvey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Garvey/Pods-Garvey.debug.xcconfig"; sourceTree = "<group>"; };
 		54C392CFC893A4C8D08D5BEB /* Pods_Garvey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Garvey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B05D2A722C4968E00573407 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		5B05D2AA22C4990E00573407 /* CartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRouter.swift; sourceTree = "<group>"; };
+		5B05D2AB22C4990E00573407 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		5B05D2AC22C4990E00573407 /* CartBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartBuilder.swift; sourceTree = "<group>"; };
+		5B05D2AD22C4990E00573407 /* CartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInteractor.swift; sourceTree = "<group>"; };
+		5B05D2B322C4993000573407 /* CatalogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRouter.swift; sourceTree = "<group>"; };
+		5B05D2B422C4993000573407 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		5B05D2B522C4993000573407 /* CatalogBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogBuilder.swift; sourceTree = "<group>"; };
+		5B05D2B622C4993000573407 /* CatalogInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogInteractor.swift; sourceTree = "<group>"; };
+		5B05D2BC22C4995900573407 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		5B05D2BD22C4995900573407 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5B05D2BE22C4995900573407 /* ProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBuilder.swift; sourceTree = "<group>"; };
+		5B05D2BF22C4995900573407 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		5B05D2C522C4999700573407 /* SingleItemRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemRouter.swift; sourceTree = "<group>"; };
+		5B05D2C622C4999700573407 /* SingleItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemViewController.swift; sourceTree = "<group>"; };
+		5B05D2C722C4999700573407 /* SingleItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemBuilder.swift; sourceTree = "<group>"; };
+		5B05D2C822C4999700573407 /* SingleItemInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemInteractor.swift; sourceTree = "<group>"; };
+		5B3B91DA22B3582B0013100C /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		5B3B91DB22B3582B0013100C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		5B3B91DC22B3582B0013100C /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		5B3B91DD22B3582B0013100C /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		5BDF4F4C22B0637F00263C87 /* Garvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Garvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDF4F4F22B0637F00263C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BDF4F5622B0638000263C87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +92,6 @@
 		5BDF4F6B22B0638100263C87 /* GarveyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GarveyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDF4F6F22B0638100263C87 /* GarveyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarveyUITests.swift; sourceTree = "<group>"; };
 		5BDF4F7122B0638100263C87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BDF4F7D22B0639500263C87 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		6C34AF1C0C8C6BA8BF88D9D6 /* Pods-GarveyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarveyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GarveyTests/Pods-GarveyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CE60038CBB6CB71D7BB5333 /* Pods-GarveyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarveyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GarveyUITests/Pods-GarveyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		95957F3F4D21BFBCCA8F9DB9 /* Pods_GarveyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarveyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +127,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B05D2A922C498F100573407 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				5B05D2AA22C4990E00573407 /* CartRouter.swift */,
+				5B05D2AB22C4990E00573407 /* CartViewController.swift */,
+				5B05D2AC22C4990E00573407 /* CartBuilder.swift */,
+				5B05D2AD22C4990E00573407 /* CartInteractor.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		5B05D2B222C4991A00573407 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				5B05D2B322C4993000573407 /* CatalogRouter.swift */,
+				5B05D2B422C4993000573407 /* CatalogViewController.swift */,
+				5B05D2B522C4993000573407 /* CatalogBuilder.swift */,
+				5B05D2B622C4993000573407 /* CatalogInteractor.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		5B05D2BB22C4994600573407 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5B05D2BC22C4995900573407 /* ProfileRouter.swift */,
+				5B05D2BD22C4995900573407 /* ProfileViewController.swift */,
+				5B05D2BE22C4995900573407 /* ProfileBuilder.swift */,
+				5B05D2BF22C4995900573407 /* ProfileInteractor.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5B05D2C422C4998700573407 /* SingleItem */ = {
+			isa = PBXGroup;
+			children = (
+				5B05D2C522C4999700573407 /* SingleItemRouter.swift */,
+				5B05D2C622C4999700573407 /* SingleItemViewController.swift */,
+				5B05D2C722C4999700573407 /* SingleItemBuilder.swift */,
+				5B05D2C822C4999700573407 /* SingleItemInteractor.swift */,
+			);
+			path = SingleItem;
+			sourceTree = "<group>";
+		};
+		5B3B91D822B31DCF0013100C /* App Start */ = {
+			isa = PBXGroup;
+			children = (
+				5B05D2A722C4968E00573407 /* AppComponent.swift */,
+				5BDF4F4F22B0637F00263C87 /* AppDelegate.swift */,
+			);
+			path = "App Start";
+			sourceTree = "<group>";
+		};
+		5B3B91D922B31DE00013100C /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				5B3B91DC22B3582B0013100C /* RootBuilder.swift */,
+				5B3B91DD22B3582B0013100C /* RootInteractor.swift */,
+				5B3B91DA22B3582B0013100C /* RootRouter.swift */,
+				5B3B91DB22B3582B0013100C /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		5B3B91E222B358440013100C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		5BDF4F4322B0637F00263C87 = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +223,13 @@
 		5BDF4F4E22B0637F00263C87 /* Garvey */ = {
 			isa = PBXGroup;
 			children = (
-				5BDF4F4F22B0637F00263C87 /* AppDelegate.swift */,
-				5BDF4F7D22B0639500263C87 /* RootViewController.swift */,
+				5B05D2C422C4998700573407 /* SingleItem */,
+				5B3B91D822B31DCF0013100C /* App Start */,
+				5B05D2A922C498F100573407 /* Cart */,
+				5B05D2B222C4991A00573407 /* Catalog */,
+				5B3B91E222B358440013100C /* Managers */,
+				5B05D2BB22C4994600573407 /* Profile */,
+				5B3B91D922B31DE00013100C /* Root */,
 				5BDF4F5622B0638000263C87 /* Assets.xcassets */,
 				5BDF4F5822B0638000263C87 /* LaunchScreen.storyboard */,
 				5BDF4F5B22B0638000263C87 /* Info.plist */,
@@ -173,6 +289,7 @@
 				5BDF4F4822B0637F00263C87 /* Sources */,
 				5BDF4F4922B0637F00263C87 /* Frameworks */,
 				5BDF4F4A22B0637F00263C87 /* Resources */,
+				E0BA42496E62CA3AF3374DEC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -357,6 +474,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E0BA42496E62CA3AF3374DEC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Garvey/Pods-Garvey-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/RIBs/RIBs.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RIBs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Garvey/Pods-Garvey-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -364,8 +513,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B05D2CB22C4999700573407 /* SingleItemBuilder.swift in Sources */,
+				5B05D2BA22C4993000573407 /* CatalogInteractor.swift in Sources */,
+				5B05D2B922C4993000573407 /* CatalogBuilder.swift in Sources */,
+				5B05D2C922C4999700573407 /* SingleItemRouter.swift in Sources */,
+				5B05D2B822C4993000573407 /* CatalogViewController.swift in Sources */,
+				5B3B91E122B3582B0013100C /* RootInteractor.swift in Sources */,
+				5B05D2CA22C4999700573407 /* SingleItemViewController.swift in Sources */,
+				5B05D2B722C4993000573407 /* CatalogRouter.swift in Sources */,
 				5BDF4F5022B0637F00263C87 /* AppDelegate.swift in Sources */,
-				5BDF4F7E22B0639500263C87 /* RootViewController.swift in Sources */,
+				5B05D2C122C4995900573407 /* ProfileViewController.swift in Sources */,
+				5B3B91DE22B3582B0013100C /* RootRouter.swift in Sources */,
+				5B05D2B022C4990E00573407 /* CartBuilder.swift in Sources */,
+				5B3B91E022B3582B0013100C /* RootBuilder.swift in Sources */,
+				5B05D2CC22C4999700573407 /* SingleItemInteractor.swift in Sources */,
+				5B05D2C022C4995900573407 /* ProfileRouter.swift in Sources */,
+				5B05D2C222C4995900573407 /* ProfileBuilder.swift in Sources */,
+				5B05D2AF22C4990E00573407 /* CartViewController.swift in Sources */,
+				5B05D2B122C4990E00573407 /* CartInteractor.swift in Sources */,
+				5B05D2AE22C4990E00573407 /* CartRouter.swift in Sources */,
+				5B3B91DF22B3582B0013100C /* RootViewController.swift in Sources */,
+				5B05D2C322C4995900573407 /* ProfileInteractor.swift in Sources */,
+				5B05D2A822C4968E00573407 /* AppComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
