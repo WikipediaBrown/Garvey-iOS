@@ -9,8 +9,11 @@
 import RIBs
 import RxSwift
 
-protocol SingleItemRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+protocol SingleItemListener: class {
+    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+}
+protocol SingleItemManaging: class {
+    func getSingleItem(with itemID: String)
 }
 
 protocol SingleItemPresentable: Presentable {
@@ -18,8 +21,8 @@ protocol SingleItemPresentable: Presentable {
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol SingleItemListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+protocol SingleItemRouting: ViewableRouting {
+    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
 final class SingleItemInteractor: PresentableInteractor<SingleItemPresentable>, SingleItemInteractable, SingleItemPresentableListener {

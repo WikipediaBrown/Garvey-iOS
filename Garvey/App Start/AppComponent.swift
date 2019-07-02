@@ -9,6 +9,9 @@
 import RIBs
 
 class AppComponent: Component<EmptyDependency>, RootDependency, CartDependency, CatalogDependency, ProfileDependency, SingleItemDependency {
+    
+    let imageManager: ImageManager = ImageManager()
+    
     lazy var catalogDependency: CatalogDependency = {
         return self
     }()

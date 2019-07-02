@@ -9,8 +9,12 @@
 import RIBs
 import RxSwift
 
-protocol CatalogRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+protocol CatalogListener: class {
+    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+}
+
+protocol CatalogManaging: class {
+
 }
 
 protocol CatalogPresentable: Presentable {
@@ -18,18 +22,23 @@ protocol CatalogPresentable: Presentable {
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol CatalogListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+protocol CatalogRouting: ViewableRouting {
+    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
 final class CatalogInteractor: PresentableInteractor<CatalogPresentable>, CatalogInteractable, CatalogPresentableListener {
+    
+    private let catalogManager: CatalogManaging?
+    private let imageManager: ImageManager
 
     weak var router: CatalogRouting?
     weak var listener: CatalogListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: CatalogPresentable) {
+    init(presenter: CatalogPresentable, imageManager: ImageManager, catalogManager: CatalogManaging) {
+        self.imageManager = imageManager
+        self.catalogManager = catalogManager
         super.init(presenter: presenter)
         presenter.listener = self
     }

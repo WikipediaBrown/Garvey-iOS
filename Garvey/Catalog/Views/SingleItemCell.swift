@@ -9,14 +9,14 @@
 import UIKit
 
 class SingleItemCell: UICollectionViewCell {
-    let imageView: UIImageView = {
+    private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .purple
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    let headlineLabel: UILabel = {
+    private let headlineLabel: UILabel = {
         let label = UILabel()
         label.text = "TEST"
         label.backgroundColor = .red
@@ -37,7 +37,7 @@ class SingleItemCell: UICollectionViewCell {
     
     func setup(with item: Item?) {
         headlineLabel.text = item?.name
-        imageDisposable = item?.image
+//        imageDisposable = item?.image
     }
     
     

@@ -11,11 +11,19 @@ import RIBs
 protocol SingleItemDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
+    var imageManager: ImageManager { get }
 }
 
 final class SingleItemComponent: Component<SingleItemDependency> {
-
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    var singleItemManager = SingleItemManager()
+    var singleItemIdentifier: String
+    var imageManager: ImageManager { return dependency.imageManager }
+    
+    init(dependency: SingleItemDependency, singleItemIdentifier: String) {
+        self.singleItemIdentifier = singleItemIdentifier
+        super.init(dependency: dependency)
+    }
 }
 
 // MARK: - Builder

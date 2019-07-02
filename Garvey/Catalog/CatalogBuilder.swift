@@ -11,11 +11,14 @@ import RIBs
 protocol CatalogDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
+    var imageManager: ImageManager { get }
 }
 
-final class CatalogComponent: Component<CatalogDependency> {
+final class CatalogComponent: Component<CatalogDependency>, SingleItemDependency {
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    var catalogManager = CatalogManager()
+    var imageManager: ImageManager { return dependency.imageManager }
 }
 
 // MARK: - Builder
@@ -33,8 +36,8 @@ final class CatalogBuilder: Builder<CatalogDependency>, CatalogBuildable {
     func build(withListener listener: CatalogListener) -> CatalogRouting {
         let component = CatalogComponent(dependency: dependency)
         let viewController = CatalogViewController()
-        let interactor = CatalogInteractor(presenter: viewController)
+        let interactor = CatalogInteractor(presenter: viewController, imageManager: component.imageManager, catalogManager: component.catalogManager)
         interactor.listener = listener
-        return CatalogRouter(interactor: interactor, viewController: viewController)
+        return CatalogRouter(interactor: interactor, viewController: viewController, component: component)
     }
 }
