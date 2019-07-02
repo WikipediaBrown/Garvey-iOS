@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Setup Firebase
         FirebaseApp.configure()
         
+        window = UIWindow(frame: UIScreen.main.bounds)
         launchRouter = RootBuilder(dependency: AppComponent()).build()
         
         if let window = window {

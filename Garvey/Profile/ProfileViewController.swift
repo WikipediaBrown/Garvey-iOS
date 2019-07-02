@@ -19,4 +19,9 @@ protocol ProfilePresentableListener: class {
 final class ProfileViewController: UIViewController, ProfilePresentable, ProfileViewControllable {
 
     weak var listener: ProfilePresentableListener?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .blue
+    }
 }

@@ -37,6 +37,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     override init(presenter: RootPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
+        presenter.setupViews()
     }
     
     func onMenuTap(tappedType swappableType: SwappableType) {

@@ -38,6 +38,6 @@ class MenuCollectionViewCell: UICollectionViewCell {
             label.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
             label.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
             label.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-            ])
+        ])
     }
 }

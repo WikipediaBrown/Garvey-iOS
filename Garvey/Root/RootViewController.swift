@@ -57,6 +57,13 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
     }
 
     func animateViewControllerReplacement(viewController: UIViewController){
+        self.addChild(viewController)
+        self.view.insertSubview(viewController.view, belowSubview: menuView)
+        viewController.didMove(toParent: self)
+        
+        let origin = CGPoint(x: 0, y: UIScreen.main.bounds.height)
+        viewController.view.frame = CGRect(origin: origin, size: UIScreen.main.bounds.size)
+        
         UIView.animate(withDuration: Constants.Root.TimeIntervals.menuSwapDuration, animations: {
             viewController.view.center.y = UIScreen.main.bounds.height/2
             self.currentViewController?.view.center.y = UIScreen.main.bounds.height*1.5
@@ -76,7 +83,7 @@ extension RootViewController: MenuViewListener {
     }
     
     func rightButtonTapped() {
-        print("right")
+        print("Right Menu Button Tapped.")
     }
     
     func menuItemTapped(with type: SwappableType) {

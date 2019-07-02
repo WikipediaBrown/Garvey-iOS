@@ -19,4 +19,9 @@ protocol CartPresentableListener: class {
 final class CartViewController: UIViewController, CartPresentable, CartViewControllable {
 
     weak var listener: CartPresentableListener?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .green
+    }
 }

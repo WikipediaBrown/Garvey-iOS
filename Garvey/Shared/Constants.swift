@@ -9,6 +9,13 @@
 import UIKit
 
 struct Constants {
+    struct Catalog {
+        struct CGFloats {
+            static let standardMargin: CGFloat = {
+                return 8
+            }()
+        }
+    }
     struct Root {
         struct CGSizes {
             static let menuCellSize: CGSize = {

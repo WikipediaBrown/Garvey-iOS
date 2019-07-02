@@ -19,4 +19,9 @@ protocol CatalogPresentableListener: class {
 final class CatalogViewController: UIViewController, CatalogPresentable, CatalogViewControllable {
 
     weak var listener: CatalogPresentableListener?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .red
+    }
 }
