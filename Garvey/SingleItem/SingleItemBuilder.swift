@@ -29,7 +29,7 @@ final class SingleItemComponent: Component<SingleItemDependency> {
 // MARK: - Builder
 
 protocol SingleItemBuildable: Buildable {
-    func build(withListener listener: SingleItemListener) -> SingleItemRouting
+    func build(withListener listener: SingleItemListener, singleItemIdentifier: String) -> SingleItemRouting
 }
 
 final class SingleItemBuilder: Builder<SingleItemDependency>, SingleItemBuildable {
@@ -38,10 +38,10 @@ final class SingleItemBuilder: Builder<SingleItemDependency>, SingleItemBuildabl
         super.init(dependency: dependency)
     }
 
-    func build(withListener listener: SingleItemListener) -> SingleItemRouting {
-        let component = SingleItemComponent(dependency: dependency)
+    func build(withListener listener: SingleItemListener, singleItemIdentifier: String) -> SingleItemRouting {
+        let component = SingleItemComponent(dependency: dependency, singleItemIdentifier: singleItemIdentifier)
         let viewController = SingleItemViewController()
-        let interactor = SingleItemInteractor(presenter: viewController)
+        let interactor = SingleItemInteractor(presenter: viewController, imageManager: component.imageManager, singleItemManager: component.singleItemManager, singleItemIdentifier: component.singleItemIdentifier)
         interactor.listener = listener
         return SingleItemRouter(interactor: interactor, viewController: viewController)
     }

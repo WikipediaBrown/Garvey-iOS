@@ -8,13 +8,14 @@
 
 import RIBs
 
-protocol CatalogInteractable: Interactable {
+protocol CatalogInteractable: Interactable, SingleItemListener {
     var router: CatalogRouting? { get set }
     var listener: CatalogListener? { get set }
 }
 
 protocol CatalogViewControllable: ViewControllable {
     // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    func presentSingleItem(with viewController: UIViewController)
 }
 
 final class CatalogRouter: ViewableRouter<CatalogInteractable, CatalogViewControllable>, CatalogRouting {

@@ -9,6 +9,11 @@
 import UIKit
 
 struct Strings {
+    static let https = "https"
+    static let harriet = "harriet.com"
+    static let host = {
+        return
+    }
     static var cannotCreateImageFromData: String {
         return NSLocalizedString("Cannot create image from data.", comment: "")
     }

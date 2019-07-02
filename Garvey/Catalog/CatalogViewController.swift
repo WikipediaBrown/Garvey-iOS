@@ -24,4 +24,8 @@ final class CatalogViewController: UIViewController, CatalogPresentable, Catalog
         super.viewDidLoad()
         view.backgroundColor = .red
     }
+    
+    func presentSingleItem(with viewController: UIViewController) {
+        present(viewController, animated: true)
+    }
 }

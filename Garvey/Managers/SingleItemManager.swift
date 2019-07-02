@@ -9,5 +9,8 @@
 import Foundation
 
 class SingleItemManager: SingleItemManaging {
-    <#code#>
+    func getSingleItem(with itemID: String) {
+        
+    }
+    
 }

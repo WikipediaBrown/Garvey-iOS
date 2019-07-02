@@ -26,13 +26,20 @@ protocol SingleItemRouting: ViewableRouting {
 }
 
 final class SingleItemInteractor: PresentableInteractor<SingleItemPresentable>, SingleItemInteractable, SingleItemPresentableListener {
+    
+    private let singleItemIdentifier: String
+    private let singleItemManager: SingleItemManaging
+    private let imageManager: ImageManager
 
     weak var router: SingleItemRouting?
     weak var listener: SingleItemListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: SingleItemPresentable) {
+    init(presenter: SingleItemPresentable, imageManager: ImageManager, singleItemManager: SingleItemManaging, singleItemIdentifier: String) {
+        self.imageManager = imageManager
+        self.singleItemManager = singleItemManager
+        self.singleItemIdentifier = singleItemIdentifier
         super.init(presenter: presenter)
         presenter.listener = self
     }
