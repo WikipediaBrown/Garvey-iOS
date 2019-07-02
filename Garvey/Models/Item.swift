@@ -8,11 +8,6 @@
 
 import UIKit
 
-struct NetworkingStrings {
-    static let https = "https"
-    static let productionHost = "https"
-}
-
 struct Item {
     let identifier: String
     let imagePath: String
@@ -22,7 +17,7 @@ struct Item {
     
     let url: URL? = {
         var components = URLComponents()
-        components.scheme = NetworkingStrings.https
+        components.scheme = NetworkingStrings.gs
         
         return components.url
     }()
