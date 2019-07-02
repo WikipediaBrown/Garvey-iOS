@@ -8,7 +8,22 @@
 
 import RIBs
 
-class AppComponent: Component<EmptyDependency>, RootDependency {
+class AppComponent: Component<EmptyDependency>, RootDependency, CartDependency, CatalogDependency, ProfileDependency, SingleItemDependency {
+    lazy var catalogDependency: CatalogDependency = {
+        return self
+    }()
+    
+    lazy var profileDependency: ProfileDependency = {
+        return self
+    }()
+    
+    lazy var singleItemDependency: SingleItemDependency = {
+        return self
+    }()
+    
+    lazy var cartDependency: CartDependency = {
+        return self
+    }()
     
     init() {
         super.init(dependency: EmptyComponent())

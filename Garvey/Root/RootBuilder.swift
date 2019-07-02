@@ -11,11 +11,27 @@ import RIBs
 protocol RootDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
+    var cartDependency: CartDependency { get }
+    var catalogDependency: CatalogDependency { get }
+    var profileDependency: ProfileDependency { get }
+    var singleItemDependency: SingleItemDependency { get }
 }
 
 final class RootComponent: Component<RootDependency> {
-
+    
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    lazy var cartBuilder: CartBuildable = {
+        return CartBuilder(dependency: dependency.cartDependency)
+    }()
+    lazy var catalogBuilder: CatalogBuildable = {
+        return CatalogBuilder(dependency: dependency.catalogDependency)
+    }()
+    lazy var profileBuilder: ProfileBuildable = {
+        return ProfileBuilder(dependency: dependency.profileDependency)
+    }()
+    lazy var singleItemBuilder: SingleItemBuildable = {
+        return SingleItemBuilder(dependency: dependency.singleItemDependency)
+    }()
 }
 
 // MARK: - Builder

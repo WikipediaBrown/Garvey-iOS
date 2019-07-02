@@ -25,6 +25,10 @@
 		5B05D2CA22C4999700573407 /* SingleItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2C622C4999700573407 /* SingleItemViewController.swift */; };
 		5B05D2CB22C4999700573407 /* SingleItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2C722C4999700573407 /* SingleItemBuilder.swift */; };
 		5B05D2CC22C4999700573407 /* SingleItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2C822C4999700573407 /* SingleItemInteractor.swift */; };
+		5B05D2CF22C4A16700573407 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2CE22C4A16700573407 /* MenuView.swift */; };
+		5B05D2D422C4A2AD00573407 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2D322C4A2AD00573407 /* Constants.swift */; };
+		5B05D2D622C4A38100573407 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2D522C4A38100573407 /* MenuCollectionViewCell.swift */; };
+		5B05D2D822C4A5BC00573407 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05D2D722C4A5BC00573407 /* Colors.swift */; };
 		5B3B91DE22B3582B0013100C /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B91DA22B3582B0013100C /* RootRouter.swift */; };
 		5B3B91DF22B3582B0013100C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B91DB22B3582B0013100C /* RootViewController.swift */; };
 		5B3B91E022B3582B0013100C /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B91DC22B3582B0013100C /* RootBuilder.swift */; };
@@ -77,6 +81,10 @@
 		5B05D2C622C4999700573407 /* SingleItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemViewController.swift; sourceTree = "<group>"; };
 		5B05D2C722C4999700573407 /* SingleItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemBuilder.swift; sourceTree = "<group>"; };
 		5B05D2C822C4999700573407 /* SingleItemInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemInteractor.swift; sourceTree = "<group>"; };
+		5B05D2CE22C4A16700573407 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		5B05D2D322C4A2AD00573407 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5B05D2D522C4A38100573407 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B05D2D722C4A5BC00573407 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5B3B91DA22B3582B0013100C /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		5B3B91DB22B3582B0013100C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		5B3B91DC22B3582B0013100C /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
@@ -130,10 +138,10 @@
 		5B05D2A922C498F100573407 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				5B05D2AA22C4990E00573407 /* CartRouter.swift */,
-				5B05D2AB22C4990E00573407 /* CartViewController.swift */,
 				5B05D2AC22C4990E00573407 /* CartBuilder.swift */,
 				5B05D2AD22C4990E00573407 /* CartInteractor.swift */,
+				5B05D2AA22C4990E00573407 /* CartRouter.swift */,
+				5B05D2AB22C4990E00573407 /* CartViewController.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -171,6 +179,24 @@
 			path = SingleItem;
 			sourceTree = "<group>";
 		};
+		5B05D2CD22C4A14D00573407 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B05D2D522C4A38100573407 /* MenuCollectionViewCell.swift */,
+				5B05D2CE22C4A16700573407 /* MenuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B05D2D022C4A18D00573407 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5B05D2D322C4A2AD00573407 /* Constants.swift */,
+				5B05D2D722C4A5BC00573407 /* Colors.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		5B3B91D822B31DCF0013100C /* App Start */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +209,7 @@
 		5B3B91D922B31DE00013100C /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				5B05D2CD22C4A14D00573407 /* Views */,
 				5B3B91DC22B3582B0013100C /* RootBuilder.swift */,
 				5B3B91DD22B3582B0013100C /* RootInteractor.swift */,
 				5B3B91DA22B3582B0013100C /* RootRouter.swift */,
@@ -223,13 +250,14 @@
 		5BDF4F4E22B0637F00263C87 /* Garvey */ = {
 			isa = PBXGroup;
 			children = (
-				5B05D2C422C4998700573407 /* SingleItem */,
 				5B3B91D822B31DCF0013100C /* App Start */,
 				5B05D2A922C498F100573407 /* Cart */,
 				5B05D2B222C4991A00573407 /* Catalog */,
 				5B3B91E222B358440013100C /* Managers */,
 				5B05D2BB22C4994600573407 /* Profile */,
 				5B3B91D922B31DE00013100C /* Root */,
+				5B05D2D022C4A18D00573407 /* Shared */,
+				5B05D2C422C4998700573407 /* SingleItem */,
 				5BDF4F5622B0638000263C87 /* Assets.xcassets */,
 				5BDF4F5822B0638000263C87 /* LaunchScreen.storyboard */,
 				5BDF4F5B22B0638000263C87 /* Info.plist */,
@@ -513,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B05D2CF22C4A16700573407 /* MenuView.swift in Sources */,
 				5B05D2CB22C4999700573407 /* SingleItemBuilder.swift in Sources */,
 				5B05D2BA22C4993000573407 /* CatalogInteractor.swift in Sources */,
 				5B05D2B922C4993000573407 /* CatalogBuilder.swift in Sources */,
@@ -533,8 +562,11 @@
 				5B05D2B122C4990E00573407 /* CartInteractor.swift in Sources */,
 				5B05D2AE22C4990E00573407 /* CartRouter.swift in Sources */,
 				5B3B91DF22B3582B0013100C /* RootViewController.swift in Sources */,
+				5B05D2D822C4A5BC00573407 /* Colors.swift in Sources */,
 				5B05D2C322C4995900573407 /* ProfileInteractor.swift in Sources */,
 				5B05D2A822C4968E00573407 /* AppComponent.swift in Sources */,
+				5B05D2D422C4A2AD00573407 /* Constants.swift in Sources */,
+				5B05D2D622C4A38100573407 /* MenuCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,13 +9,18 @@
 import RIBs
 import RxSwift
 
-protocol RootRouting: ViewableRouting {
+protocol RootRouting: LaunchRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    var currentRIB: Routing? { get set }
+    func routeToCart()
+    func routeToCatalog()
+    func routeToProfile()
 }
 
 protocol RootPresentable: Presentable {
-    var listener: RootPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
+    var listener: RootPresentableListener? { get set }
+    func setupViews()
 }
 
 protocol RootListener: class {
@@ -33,14 +38,16 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         super.init(presenter: presenter)
         presenter.listener = self
     }
-
-    override func didBecomeActive() {
-        super.didBecomeActive()
-        // TODO: Implement business logic here.
+    
+    func onMenuTap(tappedType swappableType: SwappableType) {
+        switch swappableType {
+        case .catalog:
+            if !(router?.currentRIB is CatalogRouting)  { router?.routeToCatalog() }
+        case .cart:
+            if !(router?.currentRIB is CartRouting)  { router?.routeToCart() }
+        case .profile:
+            if !(router?.currentRIB is ProfileRouting)  { router?.routeToProfile() }
+        }
     }
 
-    override func willResignActive() {
-        super.willResignActive()
-        // TODO: Pause any business logic.
-    }
 }
