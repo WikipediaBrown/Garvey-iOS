@@ -30,6 +30,8 @@ final class CatalogInteractor: PresentableInteractor<CatalogPresentable>, Catalo
     
     private let catalogManager: CatalogManaging?
     private let imageManager: ImageManager
+    
+    private var items: [Item] = []
 
     weak var router: CatalogRouting?
     weak var listener: CatalogListener?
@@ -51,5 +53,17 @@ final class CatalogInteractor: PresentableInteractor<CatalogPresentable>, Catalo
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    
+    func onCount() -> Int {
+        return items.count
+    }
+    
+    func returnItem(at indexPath: IndexPath) -> Item {
+        return items[indexPath.item]
+    }
+    
+    func onTap(at Index: IndexPath) {
+        
     }
 }

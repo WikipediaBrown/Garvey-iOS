@@ -113,6 +113,7 @@
 		5BAD47F822CB30BE00D596A5 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
 		5BAD47FA22CB36EF00D596A5 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		5BAD47FD22CB402300D596A5 /* NetworkingStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingStrings.swift; sourceTree = "<group>"; };
+		5BAD47FF22CB5EA500D596A5 /* Garvey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Garvey.entitlements; sourceTree = "<group>"; };
 		5BDF4F4C22B0637F00263C87 /* Garvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Garvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDF4F4F22B0637F00263C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BDF4F5622B0638000263C87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -319,6 +320,7 @@
 				5B05D2C422C4998700573407 /* SingleItem */,
 				5BDF4F5622B0638000263C87 /* Assets.xcassets */,
 				5BDF4F5822B0638000263C87 /* LaunchScreen.storyboard */,
+				5BAD47FF22CB5EA500D596A5 /* Garvey.entitlements */,
 				5BDF4F5B22B0638000263C87 /* Info.plist */,
 				5BAD47E422CAF6C500D596A5 /* GoogleService-Info.plist */,
 			);
@@ -438,6 +440,14 @@
 				TargetAttributes = {
 					5BDF4F4B22B0637F00263C87 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					5BDF4F5F22B0638100263C87 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -806,6 +816,7 @@
 			baseConfigurationReference = 417BB5746645902C40980B68 /* Pods-Garvey.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Garvey/Garvey.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4AM5US9G8B;
 				INFOPLIST_FILE = Garvey/Info.plist;
@@ -813,7 +824,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = IamGoodBad.Garvey;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IamGoodBad.Garvey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -825,6 +836,7 @@
 			baseConfigurationReference = 04E58EB79943D279A8EA7351 /* Pods-Garvey.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Garvey/Garvey.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4AM5US9G8B;
 				INFOPLIST_FILE = Garvey/Info.plist;
@@ -832,7 +844,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = IamGoodBad.Garvey;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IamGoodBad.Garvey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
