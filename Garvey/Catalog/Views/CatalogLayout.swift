@@ -11,6 +11,7 @@ import UIKit
 class CatalogLayout: UICollectionViewFlowLayout {
     override init() {
         super.init()
+        estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         scrollDirection = .vertical
         minimumLineSpacing = 4
     }

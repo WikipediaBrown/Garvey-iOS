@@ -40,6 +40,10 @@ class SingleItemCell: UICollectionViewCell {
 //        imageDisposable = item?.image
     }
     
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        
+    }
+    
     
     private func setupViews() {
         contentView.addSubview(imageView)
