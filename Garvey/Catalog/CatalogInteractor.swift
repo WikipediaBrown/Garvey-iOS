@@ -31,7 +31,7 @@ final class CatalogInteractor: PresentableInteractor<CatalogPresentable>, Catalo
     private let catalogManager: CatalogManaging?
     private let imageManager: ImageManager
     
-    private var items: [Item] = []
+    private var items: [Item] = Fixtures.frontPageItems
 
     weak var router: CatalogRouting?
     weak var listener: CatalogListener?
@@ -55,11 +55,12 @@ final class CatalogInteractor: PresentableInteractor<CatalogPresentable>, Catalo
         // TODO: Pause any business logic.
     }
     
-    func onCount() -> Int {
+    func onCountRequest() -> Int {
         return items.count
     }
     
-    func returnItem(at indexPath: IndexPath) -> Item {
+    func onItemRequest(at indexPath: IndexPath) -> Item? {
+        guard indexPath.item < items.count else { return nil}
         return items[indexPath.item]
     }
     

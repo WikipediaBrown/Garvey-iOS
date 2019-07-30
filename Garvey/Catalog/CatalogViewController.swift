@@ -14,7 +14,8 @@ protocol CatalogPresentableListener: class {
     // TODO: Declare properties and methods that the view controller can invoke to perform
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
-    func onCount() -> Int
+    func onCountRequest() -> Int
+    func onItemRequest(at indexPath: IndexPath) -> Item?
     func onTap(at Index: IndexPath)
 }
 
@@ -44,7 +45,7 @@ final class CatalogViewController: UIViewController, CatalogPresentable, Catalog
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-            ])
+        ])
     }
     
     func presentSingleItem(with viewController: UIViewController) {
@@ -54,11 +55,14 @@ final class CatalogViewController: UIViewController, CatalogPresentable, Catalog
 
 extension CatalogViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listener?.onCount() ?? 0
+        return listener?.onCountRequest() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SingleItemCell.description(), for: indexPath)
+        if let cell = cell as? SingleItemCell {
+            cell.setup(with: listener?.onItemRequest(at: indexPath))
+        }
         return cell
     }
 }
