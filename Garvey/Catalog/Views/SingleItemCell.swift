@@ -41,22 +41,24 @@ class SingleItemCell: UICollectionViewCell {
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        
+        let indexPath = layoutAttributes.indexPath
+        print(indexPath)
+        return layoutAttributes
     }
     
     
     private func setupViews() {
         contentView.addSubview(imageView)
         contentView.addSubview(headlineLabel)
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-            imageView.leftAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leftAnchor),
-            imageView.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 240),
-            headlineLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Constants.Catalog.CGFloats.standardMargin),
-            headlineLabel.leftAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leftAnchor),
-            headlineLabel.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor),
-            headlineLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
-            ])
+//        NSLayoutConstraint.activate([
+//            imageView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+//            imageView.leftAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leftAnchor),
+//            imageView.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor),
+//            imageView.heightAnchor.constraint(equalToConstant: 240),
+//            headlineLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Constants.Catalog.CGFloats.standardMargin),
+//            headlineLabel.leftAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leftAnchor),
+//            headlineLabel.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor),
+//            headlineLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
+//            ])
     }
 }
