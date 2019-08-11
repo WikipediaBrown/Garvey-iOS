@@ -9,37 +9,11 @@
 import UIKit
 
 struct Fixtures {
-    static let frontPageItems: [Item] = [
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil),
-        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", image: nil)]
+    static let frontPageItems: [CatalogDisplayableItem] = [
+        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .cta, image: nil),
+        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),
+        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .itemList, image: nil),
+        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),
+        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .itemList, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .cta, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .itemList, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .itemList, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .itemList, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),        Item(identifier: "alksdfjlakdf", imagePath: "", name: "", type: .singleItem, image: nil),
+    ]
 }

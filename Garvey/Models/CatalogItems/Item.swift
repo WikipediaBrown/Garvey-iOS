@@ -8,10 +8,11 @@
 
 import UIKit
 
-struct Item {
+struct Item: CatalogDisplayableItem {
     let identifier: String
     let imagePath: String
     let name: String
+    let type: CatalogDisplayableType
     
     var image: Result<UIImage, ImageError>?
     
@@ -28,5 +29,6 @@ extension Item: Codable {
         case identifier
         case imagePath
         case name
+        case type
     }
 }

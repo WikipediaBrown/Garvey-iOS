@@ -15,6 +15,11 @@ struct Constants {
                 return 8
             }()
         }
+        struct Ints {
+            static let columns: Int = {
+                return 2
+            }()
+        }
     }
     struct Root {
         struct CGSizes {

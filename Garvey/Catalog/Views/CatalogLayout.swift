@@ -8,15 +8,26 @@
 
 import UIKit
 
+protocol CatalogLayoutDelegate: class {
+    func onTypeRequest(at indexPath: IndexPath) -> CatalogDisplayableType?
+}
+
 class CatalogLayout: UICollectionViewFlowLayout {
-    override init() {
+    
+    let delegate: CatalogLayoutDelegate?
+    let columns = Constants.Catalog.Ints.columns
+    
+    init(delegate: CatalogLayoutDelegate?) {
+        self.delegate = delegate
         super.init()
         estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         scrollDirection = .vertical
-        minimumLineSpacing = 4
+        minimumLineSpacing = 5
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
 }

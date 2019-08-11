@@ -10,19 +10,19 @@ import RIBs
 import RxSwift
 import UIKit
 
-protocol CatalogPresentableListener: class {
+protocol CatalogPresentableListener: CatalogLayoutDelegate {
     // TODO: Declare properties and methods that the view controller can invoke to perform
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
     func onCountRequest() -> Int
-    func onItemRequest(at indexPath: IndexPath) -> Item?
+    func onItemRequest(at indexPath: IndexPath) -> CatalogDisplayableItem?
     func onTap(at Index: IndexPath)
 }
 
 final class CatalogViewController: UIViewController, CatalogPresentable, CatalogViewControllable {
     
     private let collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: CatalogLayout())
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: CatalogLayout(delegate: nil))
         collectionView.backgroundColor = .brown
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(SingleItemCell.self, forCellWithReuseIdentifier: SingleItemCell.description())
@@ -37,6 +37,7 @@ final class CatalogViewController: UIViewController, CatalogPresentable, Catalog
     }
     
     func setupViews() {
+        collectionView.collectionViewLayout = CatalogLayout(delegate: listener)
         view.addSubview(collectionView)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -60,8 +61,8 @@ extension CatalogViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SingleItemCell.description(), for: indexPath)
-        if let cell = cell as? SingleItemCell {
-            cell.setup(with: listener?.onItemRequest(at: indexPath))
+        if let cell = cell as? CatalogDisplayableCell {
+            cell.display(item: listener?.onItemRequest(at: indexPath))
         }
         return cell
     }

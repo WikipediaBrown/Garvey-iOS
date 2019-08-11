@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SingleItemCell: UICollectionViewCell {
+class SingleItemCell: UICollectionViewCell, CatalogDisplayableCell {
+    
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .purple
@@ -35,15 +36,25 @@ class SingleItemCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(with item: Item?) {
+    func display(item: CatalogDisplayableItem?) {
         headlineLabel.text = item?.name
-//        imageDisposable = item?.image
+        //        imageDisposable = item?.image
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        let indexPath = layoutAttributes.indexPath
-        print(indexPath)
-        return layoutAttributes
+        let newAttributes = super.preferredLayoutAttributesFitting(layoutAttributes)
+        let indexPath = newAttributes.indexPath
+        if indexPath.item % 2 == 0 {
+            print(indexPath)
+            newAttributes.size.height = 50
+        } else {
+            print(indexPath)
+            newAttributes.size.height = 100
+        }
+        newAttributes.size.width = UIScreen.main.bounds.width/2 - 5
+
+        
+        return newAttributes
     }
     
     
