@@ -10,6 +10,5 @@ import UIKit
 
 class AdCell: UICollectionViewCell {
     func display(item: CatalogDisplayableItem?) {
-        headlineLabel.text = item?.name
     }
 }

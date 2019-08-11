@@ -9,5 +9,6 @@
 import UIKit
 
 class CTACell: UICollectionViewCell {
-    
+    func display(item: CatalogDisplayableItem?) {
+    }
 }
