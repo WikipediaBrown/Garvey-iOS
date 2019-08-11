@@ -36,7 +36,11 @@ final class CatalogViewController: UIViewController, CatalogPresentable, Catalog
         setupViews()
     }
     
-    func setupViews() {
+    func presentSingleItem(with viewController: UIViewController) {
+        present(viewController, animated: true)
+    }
+    
+    private func setupViews() {
         collectionView.collectionViewLayout = CatalogLayout(delegate: listener)
         view.addSubview(collectionView)
         collectionView.dataSource = self
@@ -46,11 +50,22 @@ final class CatalogViewController: UIViewController, CatalogPresentable, Catalog
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
-        ])
+            ])
     }
     
-    func presentSingleItem(with viewController: UIViewController) {
-        present(viewController, animated: true)
+    private func getReuseIdentifier(type: CatalogDisplayableType?) -> String {
+        switch type {
+        case .some(.singleItem):
+            return SingleItemCell.description()
+        case .some(.itemList):
+            return ItemListCell.description()
+        case .some(.ad):
+            return AdCell.description()
+        case .some(.cta):
+            return CTACell.description()
+        case .none:
+            return ""
+        }
     }
 }
 
@@ -60,7 +75,10 @@ extension CatalogViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SingleItemCell.description(), for: indexPath)
+        let item = listener?.onItemRequest(at: indexPath)
+        let reuseIdentifier = getReuseIdentifier(type: item?.type)
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         if let cell = cell as? CatalogDisplayableCell {
             cell.display(item: listener?.onItemRequest(at: indexPath))
         }
