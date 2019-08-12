@@ -11,9 +11,12 @@ import UIKit
 struct Constants {
     struct Catalog {
         struct CGFloats {
-            static let standardMargin: CGFloat = {
-                return 8
-            }()
+            static let standardMargin: CGFloat = { return 8 }()
+            static let cellPadding: CGFloat = { return 6 }()
+            static let singleItemCellHeight: CGFloat = { return 225 }()
+            static let itemListCellHeight: CGFloat = { return 100 }()
+            static let adCellHeight: CGFloat = { return 88 }()
+            static let ctaCellHeight: CGFloat = { return 125 }()
         }
         struct Ints {
             static let columns: Int = {

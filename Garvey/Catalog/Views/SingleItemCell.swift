@@ -43,15 +43,15 @@ class SingleItemCell: UICollectionViewCell, CatalogDisplayableCell {
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         let newAttributes = super.preferredLayoutAttributesFitting(layoutAttributes)
-        let indexPath = newAttributes.indexPath
-        if indexPath.item % 2 == 0 {
-            print(indexPath)
-            newAttributes.size.height = 50
-        } else {
-            print(indexPath)
-            newAttributes.size.height = 100
-        }
-        newAttributes.size.width = UIScreen.main.bounds.width/2 - 5
+//        let indexPath = newAttributes.indexPath
+//        if indexPath.item % 2 == 0 {
+//            print(indexPath)
+//            newAttributes.size.height = 50
+//        } else {
+//            print(indexPath)
+//            newAttributes.size.height = 100
+//        }
+//        newAttributes.size.width = UIScreen.main.bounds.width/2 - 5
 
         
         return newAttributes

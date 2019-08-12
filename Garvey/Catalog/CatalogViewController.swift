@@ -26,6 +26,9 @@ final class CatalogViewController: UIViewController, CatalogPresentable, Catalog
         collectionView.backgroundColor = .brown
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(SingleItemCell.self, forCellWithReuseIdentifier: SingleItemCell.description())
+        collectionView.register(ItemListCell.self, forCellWithReuseIdentifier: ItemListCell.description())
+        collectionView.register(AdCell.self, forCellWithReuseIdentifier: AdCell.description())
+        collectionView.register(CTACell.self, forCellWithReuseIdentifier: CTACell.description())
         return collectionView
     }()
 

@@ -9,6 +9,16 @@
 import UIKit
 
 class CTACell: UICollectionViewCell {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .orange
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func display(item: CatalogDisplayableItem?) {
     }
 }
